@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'Student/navbarBase.html' %}
+{% load staticfiles %}
+{% block mainblock %}
+  <div class="container" style="margin-top: 100px;">
+    <form class="" method="post">
+      {% for row in insertform %}
+      {% csrf_token %}
+      <div class="form-group">
+        <p>{{ row.question }}</p>
+        {{ form.studentAns }}
+      
+      </div>
+
+      {% endfor %}
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+{% endblock %}
