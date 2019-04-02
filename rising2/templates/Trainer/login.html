@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'Trainer/base.html' %}
+{% load staticfiles %}
+{% block mainblock %}
+<div class="jumbotron">
+
+  <p>login here</p>
+
+  <form action="{% url 'Trainer:user_login' %}" method="post">
+    {% csrf_token %}
+    <labe for="username" >Username: </labe>
+    <input type="text" name="username" placeholder="enter username">
+    <labe for="password" >password: </labe>
+    <input type="text" name="password" placeholder="enter password">
+    <input type="submit" name="" value="Login">
+  </form>
+</div>
+{% endblock %}
