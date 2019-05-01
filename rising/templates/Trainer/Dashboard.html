@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'Trainer/navbarBase.html' %}
+{% load staticfiles %}
+
+{% block mainblock %}
+<div class="container" style="margin: 20px 40px;">
+  <h1><p style="align-text: center">Study Material</p></h1>
+  <div style="display: flex; flex-flow: row wrap; ">
+    {% for data in docrec %}
+
+      <div class="card" style="width: 18rem; margin: 2px 4px;">
+        <!-- <img src="{% static 'Trainer/img/pdf.jpg' %}" class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title">{{ data.title }}</h5>
+          <p class="card-text"><strong>Topic:</strong> {{ data.topic }}</p>
+          <a href="/media/{{ data.document }}" target="_blank" class="btn btn-primary">Start</a>
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
