@@ -1,1 +1,1 @@
-# learning_center
+# Online Study Center
