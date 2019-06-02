@@ -18,7 +18,7 @@ from django.conf.urls import url, include
 from Trainer import views
 urlpatterns = [
     url(r'admin/', admin.site.urls),
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.user_login, name='user_login'),
     url(r'Trainer/', include('Trainer.urls')),
     url(r'Student/', include('Student.urls')),
     url(r'^logout/', views.user_logout, name='logout'),
